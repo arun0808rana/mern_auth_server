@@ -1,0 +1,50 @@
+GET http://localhost:8998/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ja2V0IiwiaWF0IjoxNjUzNzEzMTU1LCJleHAiOjE2NTM3MTMxODV9.sqJvsgXaZwk5uOEMOT4NRKswX7re50ErHpVhNnbvBiA
+
+###
+
+DELETE http://localhost:8998/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNTY4NzU5OTIyfQ.RT6wszuCeFLwC_6ksmNMIELxiC5s-uRivfRxyZof5ag"
+}
+
+###
+
+POST http://localhost:8998/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoicm9ja2V0IiwiaWF0IjoxNjUzNzEzMTE1fQ.VNLUaekcTtLzMqXG9o9hfjZV5madxYWBqpovs_ZIwr4"
+}
+
+###
+
+POST http://localhost:8998/login
+Content-Type: application/json
+
+{
+  "username": "jason",
+}
+
+###
+
+POST http://localhost:8998/login
+Content-Type: application/json
+
+{
+  "username": "rocket"
+}
+
+###
+
+
+POST http://localhost:8998/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "john doe",
+  "email": "test@gmail.com",
+  "password": "123"
+}

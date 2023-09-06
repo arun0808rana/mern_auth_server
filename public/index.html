@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT Auth Tutorial</title>
+  </head>
+  <body>
+    <div class="auth">
+      <form onsubmit="handleSubmit(event)">
+        <input type="email" class="email" />
+        <input type="password" class="password" />
+        <div class="auth-btns">
+          <button class="signup">Signup</button>
+          <button class="login" onclick="login()">Login</button>
+        </div>
+      </form>
+      <button onclick="makePrivateRequest()">Get Private Data</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
