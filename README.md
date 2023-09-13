@@ -27,9 +27,9 @@ nodemon server.js
 
 ### Self Notes
 
-<!-- Todo: Dockerize mongodb inside volumes -->
-<!-- Todo: Convert to plug and play micro auth server -->
-<!-- Todo: Enhance jwt signing using ip address -->
-<!-- Todo: Blacklisting users -->
-<!-- Todo: Add Envalid.js to validate .env -->
-<!-- Todo: Fix hotreloading integration issue bcoz of nodemon -->
+- [ ] Dockerize mongodb inside volumes
+- [ ] Convert to plug and play micro auth server
+- [ ] Enhance jwt signing using ip address
+- [ ] Blacklisting users
+- [ ] Add Envalid.js to validate .env
+- [ ] Fix hotreloading integration issue bcoz of nodemon
