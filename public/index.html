@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JWT Auth Tutorial</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="auth">
       <form onsubmit="handleSubmit(event)">
-        <input type="email" class="email" />
-        <input type="password" class="password" />
+        <input type="email" class="email" value="test@gmail.com" />
+        <input type="password" class="password" value="123" />
         <div class="auth-btns">
-          <button class="signup">Signup</button>
+          <button class="signup" onclick="signup()">Signup</button>
           <button class="login" onclick="login()">Login</button>
+          <button class="logout" onclick="logout()">LogOut</button>
         </div>
       </form>
-      <button onclick="makePrivateRequest()">Get Private Data</button>
+      <div class="data-btns">
+        <button onclick="makePrivateRequest()">Get Private Data</button>
+        <button onclick="makePrivateRequestUsingRefreshToken()">
+          Refresh Token + Private Data
+        </button>
+      </div>
+      <div class="private-box"></div>
     </div>
 
     <script src="main.js"></script>

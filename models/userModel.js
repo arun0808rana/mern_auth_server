@@ -4,11 +4,6 @@ const Schema = mongoose.Schema;
 const jwt = require('jsonwebtoken');
 
 const UserSchema = new Schema({
-  fullName: {
-    type: String,
-    trim: true,
-    required: true
-  },
   email: {
     type: String,
     unique: true,
@@ -32,7 +27,7 @@ UserSchema.methods.comparePassword = function(password) {
 
 UserSchema.methods.generateAccessToken = function(){
   const user = this;
-  const payload = { email: user.email, fullName: user.fullName, _id: user._id };
+  const payload = { email: user.email, _id: user._id };
   user.token = jwt.sign(payload, process.env.ACCESS_TOKEN_KEY, {
     expiresIn: "30s",
   });
@@ -40,7 +35,7 @@ UserSchema.methods.generateAccessToken = function(){
 
 UserSchema.methods.generateRefreshToken = function(){
   const user = this;
-  const payload = { email: user.email, fullName: user.fullName, _id: user._id };
+  const payload = { email: user.email, _id: user._id };
   user.refreshToken = jwt.sign(payload, process.env.REFRESH_TOKEN_KEY, {
     expiresIn: "1m",
   });
